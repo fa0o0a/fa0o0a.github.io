@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CV FORM</title>
+</head>
+
+<body>
+    <h1>CV FORM</h1>
+    <form method="GET" action="index.html" target="_blank">
+        <fieldset>
+            <legend> Personal informtion: </legend>
+            <label for="fname"> Name:</label><br>
+            <input type="text" id="fname" name="fn">
+            <br><br>
+            <!-- radio -->
+            <label for="">Gender: </label>
+            <!-- radio1 -->
+            <input type="radio" id="Male" name="gender" value="m">
+            <label for="Male"> Male </label>
+            <!-- radio2 -->
+            <input type="radio" id="Fmale" name="gender" value="f">
+            <label for="fmale"> fmale </label>
+            <!-- phone -->
+            <br><br>
+            <label for="tel">Enter a phone number</label><br>
+            <input type="tel" id="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="(555-55-555">
+            <br><br>
+            <!-- URL type -->
+            <label for="linken">your linken page:</label>
+            <input type="url" id="linken" name="webpage">
+            <br><br>
+            <!-- email -->
+            <label for="email">Email</label>
+            <input type="Email" id="Email" name="Email"><br><br>
+
+        </fieldset>
+        <br><br>
+        <!--number-->
+        <label for="ex"> years of exper...(3 to 10) </label>
+        <input type="number" id="ex" name="numofe" min="3" max="10"><br><br>
+        <!--range-->
+        <label for="re">exepted salary:</label>
+        4000<input type="range" id="re" name="es" min="4000" max="10000">10000
+        <br><br>
+        <!-- checkbox-->
+ <label >language:</label><br>
+ <input type='checkbox' id='c1' name='lang' value ='Arabic'>
+ <label for='c1'> Arabic</label><br>
+ <input type='checkbox' id='c2' name='lang' value='English'>
+ <label for='c1'>English</label><br>
+ <br><br>
+
+        <!--serch-->
+        <label for=" search">search</label>
+        <input type="search" id="se" name="se">
+        <br><br>
+        <!--week-->
+        <label for="w">the week</label>
+        <input type="week" id="w" name="w">
+        <br><br>
+        <!--month-->
+        <label for="m">the month</label>
+        <input type="month" id="m" name="m">
+        <br><br>
+        <!--file-->
+        <label for="f">update file</label>
+        <input type="file">
+        <br><br>
+
+        <!-- Time-->
+        <label for="t1">the best time to work </label>
+        <input type="time" id='t1' name='bt'>
+        <br><br>
+
+        <!-- list-->
+        <label for='major'>Majors</label>
+        <input list="major" name="ms">
+        <datalist id="majors">
+            <option value="cs">
+            <option value="IT">
+            <option value="Da">
+        </datalist><br><br>
+
+        <!-- texterea-->
+        <label for='cp'>why you want to work with us </label><br>
+        <textarea id='cp' name='comment' rows='5' cols='100'></textarea>
+        <br><br>
+        <br><br>
+
+        <input type="submit" value="send">
+        <input type="submit" value="reset">
+
+        <br>
+    </form>
+</body>
+
+</html>
