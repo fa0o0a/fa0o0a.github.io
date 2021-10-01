@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>
-            Sheet 3 : Coronavirus
-        </title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1>Coronavirus Intake Form for attend class</h1>
-        <h6>for all our safrty, please fill this out 24 houers prior to each calss (until further notice). Be sure that the information you'll give is accurate and complete. Please get immediate medical attention if you have any of the severe CONID-19 signs.</h6>
-        <form method="GET" action="index.html" target="_blank">
-            <fieldset>
-                <legend> Personal informtion: </legend>
-                <!--name-->
+
+<head>
+
+    <title>
+        Sheet 3 : Coronavirus
+    </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <h1>Coronavirus Intake Form for attend class</h1>
+    <h6>for all our safrty, please fill this out 24 houers prior to each calss (until further notice). Be sure that
+        the information you'll give is accurate and complete. Please get immediate medical attention if you have any
+        of the severe CONID-19 signs.</h6>
+    <form method="GET" action="index.html" target="_blank">
+        <fieldset>
+            <legend> Personal informtion: </legend>
+            <!--name-->
             <label for="fname"> First Name:</label><br>
-            <input type="text" id="fname" name="fn">
+            <input type="text" id="fname" name="fn" required>
             <br><br>
             <label for="lname"> last Name:</label><br>
-            <input type="text" id="lname" name="ln">
+            <input type="text" id="lname" name="ln" maxlength="6">
             <br><br>
             <!--Date of Brith-->
-        <label for="Brith">Date of Brith</label><br>
-        <input type="Date of Brith" id="Brith" name="Brith">
+            <label for="datemax">Date of Brith:</label><br>
+            <input type="date" id="datemax" name="datemax" max="2002-12-31">
+            <br><br>
+            <!--phone-->
+            <label for="phone">phone</label><br>
+            <input type="text" id="phone" name="ph" autocomplete="off"><br><br>
+            <!--email-->
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="em" autocomplete="off" required><br><br>
+            <!-- radio-->
+            <label>Do you have"تطمئن-تباعد-توكلنا" APPs in your phone:</label>
+            <input type='radio' id='c1' name='lang' value='YES' required>
+            <label for='c1'> YES</label>
+            <input type='radio' id='c1' name='lang' value='NO' required>
+            <label for='c1'>NO</label><br>
+        </fieldset>
+        <fieldset>
+            <!--new fileldset-->
+            <legend>Class information</legend>
+            <!-- list-->
+            <label for="class">Choose class:</label>
+            <input list="class" name="class">
+            <datalist id="class">
+                <option value="204 IT: Web programming">
+                <option value="201 CS: programming1">
+                <option value="202 CS: programming2">
+                <option value="421 CS: Computer ethic">
+            </datalist>
+            <br><br>
+            <!-- texterea-->
+            <label for='tc'>please explain why you need to attand lab </label><br><br>
+            <textarea id='tc' name='comment' rows='10' cols='20' maxlength="2048"></textarea><br>
+        </fieldset>
+        <fieldset>
+            <legend>Health information</legend>
+            <!-- range -->
+            <label for='health'> </label>
+            0<input type='range' id='health' name='hinformation' min="0" max="10">10<br><br>
+            <!-- checkbox-->
+            <label>Cheak the symptoms that you have experienced in the PAST week:</label><br>
+            <input type='checkbox' id='c1' name='lang' value='YES'>
+            <label for='c1'> Fever/Chills</label><br>
+            <input type='checkbox' id='c2' name='lang' value='Headaches'>
+            <label for='c1'>Headaches</label><br>
+            <input type='checkbox' id='c3' name='lang' value='Coughing'>
+            <label for='c1'>Coughing</label><br>
+            <input type='checkbox' id='c4' name='lang' value='Shortness of breath'>
+            <label for='c1'>Shortness of breath</label><br>
+            <input type='checkbox' id='c5' name='lang' value='Recent loss of sense of smll or tast'>
+            <label for='c1'>Recent loss of sense of smll or tast</label><br>
+        </fieldset>
         <br><br>
-        <label for="phone">phone</label>
-            </fieldset>
-    </body>
+        <button> <a href="page2.html">send</a></button>
+
+    </form>
+</body>
+
 </html>
