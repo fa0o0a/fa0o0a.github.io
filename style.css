@@ -1,0 +1,55 @@
+body {
+    background-image: url("image/BE.jpeg"  );
+    background-size: 250px 250px;
+    background-position: top right  ; 
+    background-repeat:no-repeat ;
+ 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #DC7633;
+}
+ul {
+    list-style: square;
+}
+ol {
+    list-style: upper-roman;
+}
+ul ol {
+    list-style: lower-roman;
+}
+ol ol {
+    list-style: lower-roman;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: green;
+}
+a:active {
+    color: black;
+}
+.p1{
+    font-size: 1rem;
+    font-family: cursive;
+    color: #E9967A;
+}
+.p2{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #c96c4d;
+}
+h1{
+    border: 4px solid #FFE4B5	;
+    margin: 17px;
+    padding: 6px;
+}
