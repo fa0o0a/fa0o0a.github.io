@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title> FORM SIGN UP </title>
+</head>
+<script>
+    function validateForm() {
+        
+        var pass1 = document.getElementById("ps1").value;
+        var pass2 = document.getElementById("ps2").value;
+        var fullname = document.getElementById("fname").value;
+        var usname = document.getElementById("uname").value;
+        var regEx1 = /^[A-Za-z]+$/
+        var regEx2 = /(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[0-9])/;
+
+        
+        if (fullname == "") {
+            document.getElementById("Msg").innerHTML = "**Only latters are allowed";
+            return false;
+        }
+
+        
+        if (regEx1.test(document.getElementById('fname'))) {
+            document.getElementById("Msg").innerHTML = "**Only latters are allowed";
+            return false;
+        }
+
+        
+        if (!isNaN(usname)) {
+            document.getElementById("Msg2").innerHTML = "**User name must be filled";
+            return false;
+        }
+
+       
+        if (pass1 == "") {
+            document.getElementById("m1").innerHTML = "**Fill the password please!";
+            return false;
+        }
+
+        
+        if (pass2 == "") {
+            document.getElementById("m2").innerHTML = "**Enter the password please!";
+            return false;
+        }
+
+        
+        if (pass1.length < 6 || pass1.length > 10) {
+            document.getElementById("m1").innerHTML = "**Password must be 6-10 letter";
+            return false;
+        }
+
+        
+
+        if (regEx2.test(document.getElementById('ps1'))) {
+            document.getElementById("m1").innerHTML = "**Must contain atleast one small letter, one capital letter and one digit";
+            return false;
+        }
+
+
+        if (pass1 != pass2) {
+            document.getElementById("m2").innerHTML = "**Passwords are not same";
+            return false;
+        }
+
+    }
+
+</script>
+
+<body>
+    <h1>SIGN UP</h1>
+    <form onsubmit="return validateForm()">
+
+
+        <td> Full Name: </td>
+        <input type="text" id="fname" value="">
+        <span id="Msg" style="color:red"> </span> <br><br>
+
+
+        <td> user Name: </td>
+        <input type="text" id="uname" value="">
+        <span id="Msg2" style="color:red"> </span> <br><br>
+
+
+        <td>  Password: </td>
+        <input type="password" id="ps1" value="">
+        <span id="m1" style="color:red"> </span> <br><br>
+
+
+        <td> Confirm Password: </td>
+                <input type="password" id="ps2" value="">
+        <span id="m2" style="color:red"> </span> <br><br>
+
+        <input type="button" onclick='validateForm()' value="SIGN UP ">
+
+    </form>
+</body>
+
+</html>
